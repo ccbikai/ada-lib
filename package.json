@@ -1,21 +1,16 @@
 {
   "name": "ada-lib",
-  "description": "工具集合",
   "version": "0.0.3",
-  "license": "MIT",
-  "main": "lib/ada-lib.umd.min.js",
+  "description": "工具集合",
   "scripts": {
-    "dev": "vuese gen;vuepress dev --no-cache docs",
-    "lint": "vue-cli-service lint",
     "build": "npm run build:lib;npm run build:doc",
-    "build:lib": "node build/index.js",
+    "lint": "vue-cli-service lint",
     "build:doc": "vuese gen;vuepress build docs",
-    "test:unit": "vue-cli-service test:unit",
-    "prepack": "npm run build:lib"
+    "build:lib": "node build/index.js",
+    "dev": "vuese gen;vuepress dev --no-cache docs",
+    "prepack": "npm run build:lib",
+    "test:unit": "vue-cli-service test:unit"
   },
-  "files": [
-    "lib"
-  ],
   "dependencies": {
     "vue": "^2"
   },
@@ -28,7 +23,9 @@
     "@vue/test-utils": "^1.0.0-beta.20",
     "@vuepress/plugin-register-components": "^1.0.0-alpha.0",
     "@vuese/cli": "^2.0.1",
+    "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "^10.0.1",
+    "babel-jest": "^23.6.0",
     "eslint": "^5.8.0",
     "eslint-plugin-vue": "^5.0.0",
     "lint-staged": "^8.1.0",
@@ -41,9 +38,13 @@
     "vue-template-compiler": "^2",
     "vuepress": "^1.0.0-alpha.32"
   },
+  "files": [
+    "lib"
+  ],
   "gitHooks": {
     "pre-commit": "lint-staged"
   },
+  "license": "MIT",
   "lint-staged": {
     "*.js": [
       "vue-cli-service lint",
@@ -53,5 +54,6 @@
       "vue-cli-service lint",
       "git add"
     ]
-  }
+  },
+  "main": "lib/ada-lib.umd.min.js"
 }
