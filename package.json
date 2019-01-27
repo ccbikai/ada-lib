@@ -14,7 +14,8 @@
     "prepack": "npm run build:lib"
   },
   "files": [
-    "lib"
+    "lib",
+    "src"
   ],
   "dependencies": {
     "vue": "^2"
