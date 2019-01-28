@@ -13,32 +13,37 @@ yarn add ada-lib
 ## 使用
 
 ```js
+// 全量导入
 import 'ada-lib/lib/ada-lib.css'
 import adaLib from 'ada-lib'
 import Vue from 'vue'
 
 Vue.use(adaLib)
-// or
+// or 手动按需导入
 import 'ada-lib/lib/demo/ada-lib-demo.css'
 import { Demo } from 'ada-lib' // 配合 babel 插件可以做到按需加载
 import Vue from 'vue'
 
 // 方式一
 Vue.use(Demo)
-// or
 // 方式二
+Vue.component('Demo', Demo)
+// 方式三
 export default {
   components: {
     Demo
   }
 }
 
-// or
+// or 使用 CDN
 // 使用 UMD 方式，CDN https://www.jsdelivr.com/package/npm/ada-lib
 
-var adaLib = window['ada-lib'] // https://cdn.jsdelivr.net/npm/ada-lib/lib/ada-lib.umd.min.js
+var adaLib = window['ada-lib'] // https://cdn.jsdelivr.net/npm/ada-lib/lib/ada-lib.umd.min.js, https://cdn.jsdelivr.net/npm/ada-lib/lib/ada-lib.css
 
-var adaLibDemo = window['ada-lib-demo'] // https://cdn.jsdelivr.net/npm/ada-lib/lib/demo/ada-lib-demo.umd.min.js
+var adaLibDemo = window['ada-lib-demo'] // https://cdn.jsdelivr.net/npm/ada-lib/lib/demo/ada-lib-demo.umd.min.js, https://cdn.jsdelivr.net/npm/ada-lib/lib/demo/ada-lib-demo.css
+
+// demo
+// https://jsfiddle.net/ccbikai/7j0Lbcku/9/
 
 ```
 
