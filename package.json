@@ -1,7 +1,9 @@
 {
   "name": "ada-lib",
-  "version": "0.0.3",
   "description": "工具集合",
+  "version": "0.0.4",
+  "license": "MIT",
+  "main": "lib/ada-lib.umd.min.js",
   "scripts": {
     "build": "npm run build:lib;npm run build:doc",
     "lint": "vue-cli-service lint",
@@ -11,6 +13,10 @@
     "prepack": "npm run build:lib",
     "test:unit": "vue-cli-service test:unit"
   },
+  "files": [
+    "lib",
+    "src"
+  ],
   "dependencies": {
     "vue": "^2"
   },
@@ -38,13 +44,9 @@
     "vue-template-compiler": "^2",
     "vuepress": "^1.0.0-alpha.32"
   },
-  "files": [
-    "lib"
-  ],
   "gitHooks": {
     "pre-commit": "lint-staged"
   },
-  "license": "MIT",
   "lint-staged": {
     "*.js": [
       "vue-cli-service lint",
@@ -54,6 +56,5 @@
       "vue-cli-service lint",
       "git add"
     ]
-  },
-  "main": "lib/ada-lib.umd.min.js"
+  }
 }
