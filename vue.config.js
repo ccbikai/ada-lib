@@ -1,5 +1,14 @@
+const path = require('path')
+
 module.exports = {
-  publicPath: './',
   lintOnSave: process.env.NODE_ENV !== 'production',
-  productionSourceMap: false
+  productionSourceMap: false,
+  css: {
+    loaderOptions: {
+      stylus: {
+        include: [path.join(__dirname, './src/stylus')],
+        import: ['base.styl']
+      }
+    }
+  }
 }

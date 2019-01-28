@@ -69,3 +69,59 @@ module.exports = {
 // page.js
 import { Demo } from 'ada-lib'
 ```
+
+## 自定义主题
+
+自定义主题的核心是重新编译 stylus 文件，依赖 [stylus-loader](https://github.com/shama/stylus-loader), 请自行安装 。
+
+### 自定义主题-全量加载
+
+1. 在项目里边创建一个 `base.styl` 文件
+
+```styl
+// 导入组件基础样式库
+@import '~ada-lib/src/stylus/base.styl'
+
+// 自定义样式的代码，变量等
+primary-color = #f63
+```
+
+2. 给 webpack 的 stylus-loader 增加配置
+
+```js
+{
+  import: [path.join(__dirname, './src/base.styl')] // 注意地址要与第1步对应
+}
+```
+
+3. 业务代码导入样式文件
+
+```js
+// main.js
+import 'ada-lib/src/stylus/index.styl'
+```
+
+### 自定义主题-按需加载
+
+按需加载与全量加载前两步相同，第`3`步改为使用 Babel 自定义插件导入
+
+```js
+// babel.config.js
+module.exports = {
+  plugins: [
+    [
+      'import',
+      {
+        libraryName: 'ada-lib',
+        customName: (name) => {
+          return `ada-lib/lib/${name}/ada-lib-${name}.common.js`
+        },
+        style: (name) => {
+          return name.replace(/\/lib\//g, '/src/stylus/').replace(/ada-lib-(.*)\.common\.js$/g, 'style.styl')
+        }
+      },
+      'ada-lib'
+    ]
+  ]
+}
+```

@@ -52,17 +52,5 @@ export default {
 }
 </script>
 
-<style lang="stylus" scoped>
-.ada-demo {
-  color: #333;
-  line-height: 1.5;
-
-  .ada-demo-name {
-    font-size: 20px;
-  }
-
-  .ada-demo-gender {
-    font-size: 14px;
-  }
-}
+<style lang="stylus" scoped src="../../stylus/demo/style.styl">
 </style>

@@ -59,24 +59,5 @@ export default {
 }
 </script>
 
-<style lang="stylus" scoped>
-.ada-watermark {
-  position: relative;
-
-  .watermark-main {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0.5;
-    background-repeat: repeat;
-  }
-
-  .watermark-content {
-    position: relative;
-    z-index: 1;
-  }
-}
+<style lang="stylus" scoped src="../../stylus/watermark/style.styl">
 </style>

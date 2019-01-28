@@ -1,3 +1,4 @@
+const path = require('path')
 const _ = require('lodash')
 const pkg = require('../../package.json')
 const examplesDir = 'examples'
@@ -11,6 +12,10 @@ module.exports = {
     extendMarkdown: md => {
       md.use(require('markdown-it-include'))
     }
+  },
+  stylus: {
+    include: [path.join(__dirname, '../../src/stylus')],
+    import: ['base.styl']
   },
   plugins: {
     '@vuepress/plugin-register-components': {
