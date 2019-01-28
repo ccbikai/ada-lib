@@ -1,7 +1,7 @@
 {
   "name": "ada-lib",
   "description": "工具集合",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "license": "MIT",
   "main": "lib/ada-lib.umd.min.js",
   "scripts": {
