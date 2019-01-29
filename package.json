@@ -8,7 +8,7 @@
     "build": "npm run build:lib;npm run build:doc",
     "lint": "vue-cli-service lint",
     "build:doc": "vuese gen;vuepress build docs",
-    "build:lib": "node build/index.js",
+    "build:lib": "node scripts/build.js",
     "dev": "vuese gen;vuepress dev --no-cache docs",
     "prepack": "npm run build:lib",
     "test:unit": "vue-cli-service test:unit"

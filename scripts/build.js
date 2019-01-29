@@ -19,11 +19,11 @@ const pkg = require('../package.json')
       code = shell.exec(`npx vue-cli-service build --no-clean --target lib --formats commonjs,umd-min --dest lib/${name} --name ${pkg.name}-${name} ${file}`).code
     }
 
-    console.log(`${name} build ${!code ? 'success' : 'error'}`)
+    console.log(`${name} build ${!code ? 'success' : 'fail'}`)
 
     return !code
   })
 
   rimraf.sync('lib/**/demo.html')
-  console.log(result ? 'packages build success' : 'packages build error')
+  console.log(result ? 'packages build success' : 'packages build fail')
 })()
