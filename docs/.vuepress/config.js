@@ -37,6 +37,7 @@ module.exports = {
         children: [
           ['/components/', '总览'],
           '/components/Demo',
+          '/components/Icon',
           '/components/Watermark'
         ]
       }

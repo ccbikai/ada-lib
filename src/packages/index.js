@@ -1,8 +1,10 @@
 import Demo from './demo'
+import Icon from './icon'
 import Watermark from './watermark'
 
 const components = {
   Demo,
+  Icon,
   Watermark
 }
 
@@ -20,6 +22,7 @@ if (typeof window !== 'undefined' && window.Vue) {
 export {
   install,
   Demo,
+  Icon,
   Watermark
 }
 

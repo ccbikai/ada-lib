@@ -2809,6 +2809,11 @@ cli-width@^2.0.0:
   resolved "http://registry.npm.taobao.org/cli-width/download/cli-width-2.2.0.tgz#ff19ede8a9a5e579324147b0c11f0fbcbabed639"
   integrity sha1-/xnt6Kml5XkyQUewwR8PvLq+1jk=
 
+clipboard-polyfill@^2.7.0:
+  version "2.7.0"
+  resolved "http://registry.npm.taobao.org/clipboard-polyfill/download/clipboard-polyfill-2.7.0.tgz#4f4344bb3405f88609ccf8ee2d445018da0e318f"
+  integrity sha1-T0NEuzQF+IYJzPjuLURQGNoOMY8=
+
 clipboard@^2.0.0:
   version "2.0.4"
   resolved "http://registry.npm.taobao.org/clipboard/download/clipboard-2.0.4.tgz#836dafd66cf0fea5d71ce5d5b0bf6e958009112d"
@@ -6118,6 +6123,11 @@ invert-kv@^2.0.0:
   version "2.0.0"
   resolved "http://registry.npm.taobao.org/invert-kv/download/invert-kv-2.0.0.tgz#7393f5afa59ec9ff5f67a27620d11c226e3eec02"
   integrity sha1-c5P1r6Weyf9fZ6J2INEcIm4+7AI=
+
+ionicons@^4.5.5:
+  version "4.5.5"
+  resolved "http://registry.npm.taobao.org/ionicons/download/ionicons-4.5.5.tgz#b059958a54dd45cfa127acc0baf11503b8671e51"
+  integrity sha1-sFmVilTdRc+hJ6zAuvEVA7hnHlE=
 
 ip-regex@^2.1.0:
   version "2.1.0"
