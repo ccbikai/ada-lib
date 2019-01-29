@@ -37,9 +37,6 @@ export default {
   display: flex;
   flex-wrap: wrap;
 
-  .icon-group {
-  }
-
   .icon-item {
     width: 60px;
     text-align: center;
